@@ -1,13 +1,20 @@
-if :init==0 then goto1 end
-b=:r if b>2 then b=2 goto4+:a1 end if :r<1 then b=1 end
-goto4+:a1
-:r0=(b-1)*100 goto2
-:r1=(b-1)*100 goto2
-:r2=(b-1)*100 goto2
-:r3=(b-1)*100 goto2
-:r4=(b-1)*100 goto2
-:r5=(b-1)*100 goto2
-:r6=(b-1)*100 goto2
-:r7=(b-1)*100 goto2
-:r8=(b-1)*100 goto2
-goto13
+if :a1%2==0 then :r0=(:r-1)*100 else :r1=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :r2=(:r-1)*100 else :r3=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :r4=(:r-1)*100 else :r5=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :r6=(:r-1)*100 else :r7=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :r8=(:r-1)*100 else :r9=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :s0=(:r-1)*100 else :s1=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :s2=(:r-1)*100 else :s3=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :s4=(:r-1)*100 else :s5=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :s6=(:r-1)*100 else :s7=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :s8=(:r-1)*100 else :s9=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :t0=(:r-1)*100 else :t1=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :t2=(:r-1)*100 else :t3=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :t4=(:r-1)*100 else :t5=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :t6=(:r-1)*100 else :t7=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :t8=(:r-1)*100 else :t9=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :u0=(:r-1)*100 else :u1=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :u2=(:r-1)*100 else :u3=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :u4=(:r-1)*100 else :u5=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :u6=(:r-1)*100 else :u7=(:r-1)*100 end goto1+:a1/2
+if :a1%2==0 then :u8=(:r-1)*100 else :u9=(:r-1)*100 end goto1+:a1/2

@@ -1,20 +1,30 @@
-include "generator_hardware"
+include "_define"
 
 if :IsInitialized==0 then
 
-    :MaxBatteryPower=10000
-    :BatteryLoad_1 = :MaxBatteryPower
-    :BatteryLoad_2 = :MaxBatteryPower
+    // device fields -//- do not need initilalization
+    :BatteryLoad_1 = 10000
+    :BatteryLoad_2 = 10000
 
+    // const varibales -//- manual initilalization
+    :PowerGoal = (10000*2-50)
     :ReactorMaxProduction = (1000*3*1.5)
-    :ReactorsNeeded = 0
-    :MaxNumberActiveReactors = 2
+    :NumberReactors = 18
 
-    :ActiveReactor_0 = 0
-    :ActiveReactor_1 = 1
+    // global variables -//- default values:
+    :ActiveReactor_00 = 0%:NumberReactors
+    :ActiveReactor_01 = 1%:NumberReactors
+    :ActiveReactor_02 = 2%:NumberReactors
+    :ActiveReactor_03 = 3%:NumberReactors
+    :ActiveReactor_04 = 4%:NumberReactors
+    :ActiveReactor_05 = 5%:NumberReactors
+    :ActiveReactor_06 = 6%:NumberReactors
+    :ActiveReactor_07 = 7%:NumberReactors
+    :ActiveReactor_08 = 8%:NumberReactors
+    :ActiveReactor_09 = 9%:NumberReactors
 end
 
-:IsInitialized=1
+:IsInitialized+=1
 
 fin>
 goto fin

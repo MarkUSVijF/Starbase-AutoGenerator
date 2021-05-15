@@ -1,8 +1,8 @@
-include "generator_hardware"
+include "_define"
 include "std/logic"
 
 // ##### settings #####
-define :Reactor = :ActiveReactor_0
+define :Reactor = :ActiveReactor_00
 // we only need to check this reactor
 
 macro check(fuel_A, fuel_B) line

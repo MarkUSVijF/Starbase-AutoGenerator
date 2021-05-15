@@ -1,10 +1,10 @@
-include "generator_hardware"
+include "_define"
 include "std/logic"
 include "std/math"
 
 
 // ##### settings #####
-define :Reactor = :ActiveReactor_0
+define :Reactor = :ActiveReactor_00
 // from 0 to 1
 define :RangeFrom = 0
 
@@ -12,7 +12,7 @@ macro setEfficiency(ReactorEfficiency_A, ReactorEfficiency_B) line
 if :Reactor%2==0 then ReactorEfficiency_A =(:ReactorsNeeded-:RangeFrom)*100 else ReactorEfficiency_B =(:ReactorsNeeded-:RangeFrom)*100 end
 end
 
-//logic_wait(:IsInitialized==0); goto table+:Reactor/2 // do not wait - just set :ActiveReactor_x before :ReactorsNeeded is >0
+//logic_wait(:IsInitialized==0); goto table+:Reactor/2 // do not wait - just set :ActiveReactor_xx before :ReactorsNeeded is >0
 
 // one chip ractor can controll up to 40 fuel chambers
 table>

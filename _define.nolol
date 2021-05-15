@@ -1,0 +1,32 @@
+include "_device_B"
+
+// #####  const settings  #####
+
+// ----- Battery ----- //
+define :PowerGoal=:m
+// ----- Reactor ----- //
+define :ReactorMaxProduction = :rp
+define :NumberReactors = :rn
+define :reactorResetTiming_sec=60
+
+
+// ##### global variables #####
+
+define :IsInitialized = :init
+// ----- Reactor ----- //
+define :ReactorsNeeded = :r
+define :ActiveReactor_00 = :a0
+define :ActiveReactor_01 = :a1
+define :ActiveReactor_02 = :a2
+define :ActiveReactor_03 = :a3
+define :ActiveReactor_04 = :a4
+define :ActiveReactor_05 = :a5
+define :ActiveReactor_06 = :a6
+define :ActiveReactor_07 = :a7
+define :ActiveReactor_08 = :a8
+define :ActiveReactor_09 = :a9
+define :SwapActiveReactors = :sa
+
+
+
+

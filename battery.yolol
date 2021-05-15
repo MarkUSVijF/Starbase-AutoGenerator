@@ -1,3 +1,0 @@
-if :init==0 then goto1 end
-if :b1>0 then :b1-=:e goto2 end if :b2>0 then :b2-=:e goto2 end
-goto3

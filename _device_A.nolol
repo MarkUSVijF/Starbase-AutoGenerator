@@ -1,16 +1,12 @@
+// running generators r0,r1,r2,r3
 
-define :IsInitialized = :init
+// #####   device field   #####
 
-// ##### Battery #####
-define :MaxBatteryPower=:m
+// ----- Battery ----- //
 define :BatteryLoad_1 = :b1
 define :BatteryLoad_2 = :b2
 
-
-define :ReactorsNeeded = :r
-define :ReactorMaxProduction = :rp
-
-// max 40 ractors per chip
+// ----- Reactor ----- // - // max 40 ractors per chip
 define :ReactorEfficiency_00 = :r0
 define :ReactorEfficiency_01 = :r1
 define :ReactorEfficiency_02 = :r2
@@ -59,17 +55,36 @@ define :ReactorFuel_03 = :f3
 define :ReactorFuel_04 = :f4
 define :ReactorFuel_05 = :f5
 define :ReactorFuel_06 = :f6
-
-
-
-
-define :MaxNumberActiveReactors = :rm
-
-define :ActiveReactor_0 = :a0
-define :ActiveReactor_1 = :a1
-define :ActiveReactor_2 = :a2
-define :ActiveReactor_3 = :a3
-
-define :SwapActiveReactors = :sa
-
-define :EnergyNeed = :e
+define :ReactorFuel_07 = :f7
+define :ReactorFuel_08 = :f8
+define :ReactorFuel_09 = :f9
+define :ReactorFuel_10 = :g0
+define :ReactorFuel_11 = :g1
+define :ReactorFuel_12 = :g2
+define :ReactorFuel_13 = :g3
+define :ReactorFuel_14 = :g4
+define :ReactorFuel_15 = :g5
+define :ReactorFuel_16 = :g6
+define :ReactorFuel_17 = :f7
+define :ReactorFuel_18 = :g8
+define :ReactorFuel_19 = :g9
+define :ReactorFuel_20 = :h0
+define :ReactorFuel_21 = :h1
+define :ReactorFuel_22 = :h2
+define :ReactorFuel_23 = :h3
+define :ReactorFuel_24 = :h4
+define :ReactorFuel_25 = :h5
+define :ReactorFuel_26 = :h6
+define :ReactorFuel_27 = :h7
+define :ReactorFuel_28 = :h8
+define :ReactorFuel_29 = :h9
+define :ReactorFuel_30 = :i0
+define :ReactorFuel_31 = :i1
+define :ReactorFuel_32 = :i2
+define :ReactorFuel_33 = :i3
+define :ReactorFuel_34 = :i4
+define :ReactorFuel_35 = :i5
+define :ReactorFuel_36 = :i6
+define :ReactorFuel_37 = :i7
+define :ReactorFuel_38 = :i8
+define :ReactorFuel_39 = :i9

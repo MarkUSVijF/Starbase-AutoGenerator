@@ -1,13 +1,19 @@
-include "generator_hardware"
+include "_define"
 include "std/logic"
+include "std/string"
 
-// ##### settings #####
-
-
+    
 start>
-if :SwapActiveReactors==0 then goto start end
-
-
-
-fin>
-goto fin
+logic_wait(:IsInitialized<=1)
+goto start+:SwapActiveReactors$
+:ActiveReactor_00=:ActiveReactor_01
+:ActiveReactor_01=:ActiveReactor_02
+:ActiveReactor_02=:ActiveReactor_03
+:ActiveReactor_03=:ActiveReactor_04
+:ActiveReactor_04=:ActiveReactor_05
+:ActiveReactor_05=:ActiveReactor_06
+:ActiveReactor_06=:ActiveReactor_07
+:ActiveReactor_07=:ActiveReactor_08
+:ActiveReactor_08=:ActiveReactor_09
+:ActiveReactor_09=:ActiveReactor_09+1%:NumberReactors
+:SwapActiveReactors=0; goto start

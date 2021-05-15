@@ -1,0 +1,2 @@
+if :init==0 then goto1 end
+:r=(:m*1.5-(:b1+:b2))/:rp goto2
