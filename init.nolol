@@ -1,0 +1,20 @@
+include "generator_hardware"
+
+if :IsInitialized==0 then
+
+    :MaxBatteryPower=10000
+    :BatteryLoad_1 = :MaxBatteryPower
+    :BatteryLoad_2 = :MaxBatteryPower
+
+    :ReactorMaxProduction = (1000*3*1.5)
+    :ReactorsNeeded = 0
+    :MaxNumberActiveReactors = 2
+
+    :ActiveReactor_0 = 0
+    :ActiveReactor_1 = 1
+end
+
+:IsInitialized=1
+
+fin>
+goto fin

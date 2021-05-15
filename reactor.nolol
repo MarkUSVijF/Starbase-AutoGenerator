@@ -1,0 +1,25 @@
+include "generator_hardware"
+include "std/logic"
+include "std/math"
+
+logic_wait(:IsInitialized==0)
+
+start>
+
+// *2 since it uses two lines; /100 since its [0-100]; /5 for slowdown
+:BatteryLoad_2 += :ReactorMaxProduction*( :ReactorEfficiency_0+:ReactorEfficiency_1+:ReactorEfficiency_2+:ReactorEfficiency_3+:ReactorEfficiency_4+:ReactorEfficiency_5+:ReactorEfficiency_6+:ReactorEfficiency_7+:ReactorEfficiency_8 )*2/100
+
+if (:BatteryLoad_2>:MaxBatteryPower) then
+    :BatteryLoad_1 += :BatteryLoad_2-:MaxBatteryPower
+    :BatteryLoad_2 = :MaxBatteryPower
+end
+if (:BatteryLoad_1>:MaxBatteryPower) then
+    :BatteryLoad_1 = :MaxBatteryPower
+end
+
+goto start
+
+
+
+fin>
+goto fin

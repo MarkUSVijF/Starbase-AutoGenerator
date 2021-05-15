@@ -1,0 +1,13 @@
+if :init==0 then goto1 end
+b=:r if b>2 then b=2 goto4+:a1 end if :r<1 then b=1 end
+goto4+:a1
+:r0=(b-1)*100 goto2
+:r1=(b-1)*100 goto2
+:r2=(b-1)*100 goto2
+:r3=(b-1)*100 goto2
+:r4=(b-1)*100 goto2
+:r5=(b-1)*100 goto2
+:r6=(b-1)*100 goto2
+:r7=(b-1)*100 goto2
+:r8=(b-1)*100 goto2
+goto13

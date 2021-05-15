@@ -1,0 +1,27 @@
+include "generator_hardware"
+include "std/logic"
+
+logic_wait(:IsInitialized==0)
+:EnergyNeed = 500
+
+start>
+
+
+wakeTime=time()+:MaxBatteryPower*100
+
+logic_wait(time()<wakeTime)
+if :BatteryLoad_1+:BatteryLoad_2<=0 then
+    :EnergyNeed = 0
+    goto fin
+end
+if :EnergyNeed>:BatteryLoad_1+:BatteryLoad_2 then
+    :EnergyNeed = 0
+    :BatteryLoad_1 = 0
+    :BatteryLoad_2 = 0
+    goto fin
+end
+:EnergyNeed += 500
+goto start
+
+fin>
+goto fin

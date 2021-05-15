@@ -1,0 +1,13 @@
+include "generator_hardware"
+include "std/logic"
+
+// ##### settings #####
+
+
+start>
+if :SwapActiveReactors==0 then goto start end
+
+
+
+fin>
+goto fin

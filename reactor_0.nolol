@@ -1,0 +1,38 @@
+include "generator_hardware"
+include "std/logic"
+include "std/math"
+
+
+// ##### settings #####
+define :Reactor = :ActiveReactor_0
+// from 0 to 1
+define :RangeFrom = 0
+
+macro setEfficiency(ReactorEfficiency_A, ReactorEfficiency_B) line
+if :Reactor%2==0 then ReactorEfficiency_A =(:ReactorsNeeded-:RangeFrom)*100 else ReactorEfficiency_B =(:ReactorsNeeded-:RangeFrom)*100 end
+end
+
+//logic_wait(:IsInitialized==0); goto table+:Reactor/2 // do not wait - just set :ActiveReactor_x before :ReactorsNeeded is >0
+
+// one chip ractor can controll up to 40 fuel chambers
+table>
+$ setEfficiency(:ReactorEfficiency_00,:ReactorEfficiency_01); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_02,:ReactorEfficiency_03); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_04,:ReactorEfficiency_05); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_06,:ReactorEfficiency_07); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_08,:ReactorEfficiency_09); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_10,:ReactorEfficiency_11); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_12,:ReactorEfficiency_13); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_14,:ReactorEfficiency_15); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_16,:ReactorEfficiency_17); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_18,:ReactorEfficiency_19); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_20,:ReactorEfficiency_21); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_22,:ReactorEfficiency_23); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_24,:ReactorEfficiency_25); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_26,:ReactorEfficiency_27); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_28,:ReactorEfficiency_29); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_30,:ReactorEfficiency_31); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_32,:ReactorEfficiency_33); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_34,:ReactorEfficiency_35); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_36,:ReactorEfficiency_37); goto table+(:Reactor/2) $
+$ setEfficiency(:ReactorEfficiency_38,:ReactorEfficiency_39); goto table+(:Reactor/2) $

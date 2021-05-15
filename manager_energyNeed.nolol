@@ -1,0 +1,21 @@
+include "generator_hardware"
+include "std/logic"
+
+logic_wait(:IsInitialized==0)
+
+start>
+r = (:MaxBatteryPower*1.5-(:BatteryLoad_1+:BatteryLoad_2))/(:ReactorMaxProduction)
+
+if r < 0 then
+    :ReactorsNeeded = 0
+else if r > :MaxNumberActiveReactors then
+    :ReactorsNeeded = :MaxNumberActiveReactors
+else
+    :ReactorsNeeded = r
+end
+goto start
+
+
+
+fin>
+goto fin

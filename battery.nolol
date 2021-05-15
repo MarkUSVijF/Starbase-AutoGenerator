@@ -1,0 +1,21 @@
+include "generator_hardware"
+include "std/logic"
+
+logic_wait(:IsInitialized==0)
+
+start>
+
+if :BatteryLoad_1 > 0 then 
+    :BatteryLoad_1-=:EnergyNeed
+    goto start
+end
+if :BatteryLoad_2 > 0 then 
+    :BatteryLoad_2-=:EnergyNeed
+    goto start
+end
+
+//goto start
+
+
+fin>
+goto fin

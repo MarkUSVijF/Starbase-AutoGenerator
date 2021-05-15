@@ -1,0 +1,38 @@
+include "generator_hardware"
+include "std/logic"
+include "std/math"
+
+
+// ##### settings #####
+define :Reactor = :ActiveReactor_0
+// from 0 to 1
+define :RangeFrom = 0
+
+
+logic_wait(:IsInitialized==0)
+
+start>
+
+goto table+:Reactor
+
+// one chip ractor can controll up to 19 fuel chambers
+table>
+$ :ReactorEfficiency_0 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_1 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_2 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_3 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_4 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_5 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_6 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_7 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_8 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_9 =(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_10=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_11=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_12=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_13=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_14=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_15=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_16=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_17=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $
+$ :ReactorEfficiency_18=(:ReactorsNeeded-:RangeFrom)*100; goto table+:Reactor $

@@ -1,0 +1,75 @@
+
+define :IsInitialized = :init
+
+// ##### Battery #####
+define :MaxBatteryPower=:m
+define :BatteryLoad_1 = :b1
+define :BatteryLoad_2 = :b2
+
+
+define :ReactorsNeeded = :r
+define :ReactorMaxProduction = :rp
+
+// max 40 ractors per chip
+define :ReactorEfficiency_00 = :r0
+define :ReactorEfficiency_01 = :r1
+define :ReactorEfficiency_02 = :r2
+define :ReactorEfficiency_03 = :r3
+define :ReactorEfficiency_04 = :r4
+define :ReactorEfficiency_05 = :r5
+define :ReactorEfficiency_06 = :r6
+define :ReactorEfficiency_07 = :r7
+define :ReactorEfficiency_08 = :r8
+define :ReactorEfficiency_09 = :r9
+define :ReactorEfficiency_10 = :s0
+define :ReactorEfficiency_11 = :s1
+define :ReactorEfficiency_12 = :s2
+define :ReactorEfficiency_13 = :s3
+define :ReactorEfficiency_14 = :s4
+define :ReactorEfficiency_15 = :s5
+define :ReactorEfficiency_16 = :s6
+define :ReactorEfficiency_17 = :s7
+define :ReactorEfficiency_18 = :s8
+define :ReactorEfficiency_19 = :s9
+define :ReactorEfficiency_20 = :t0
+define :ReactorEfficiency_21 = :t1
+define :ReactorEfficiency_22 = :t2
+define :ReactorEfficiency_23 = :t3
+define :ReactorEfficiency_24 = :t4
+define :ReactorEfficiency_25 = :t5
+define :ReactorEfficiency_26 = :t6
+define :ReactorEfficiency_27 = :t7
+define :ReactorEfficiency_28 = :t8
+define :ReactorEfficiency_29 = :t9
+define :ReactorEfficiency_30 = :u0
+define :ReactorEfficiency_31 = :u1
+define :ReactorEfficiency_32 = :u2
+define :ReactorEfficiency_33 = :u3
+define :ReactorEfficiency_34 = :u4
+define :ReactorEfficiency_35 = :u5
+define :ReactorEfficiency_36 = :u6
+define :ReactorEfficiency_37 = :u7
+define :ReactorEfficiency_38 = :u8
+define :ReactorEfficiency_39 = :u9
+
+define :ReactorFuel_00 = :f0
+define :ReactorFuel_01 = :f1
+define :ReactorFuel_02 = :f2
+define :ReactorFuel_03 = :f3
+define :ReactorFuel_04 = :f4
+define :ReactorFuel_05 = :f5
+define :ReactorFuel_06 = :f6
+
+
+
+
+define :MaxNumberActiveReactors = :rm
+
+define :ActiveReactor_0 = :a0
+define :ActiveReactor_1 = :a1
+define :ActiveReactor_2 = :a2
+define :ActiveReactor_3 = :a3
+
+define :SwapActiveReactors = :sa
+
+define :EnergyNeed = :e

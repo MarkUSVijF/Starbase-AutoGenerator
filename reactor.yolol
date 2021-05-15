@@ -1,0 +1,4 @@
+if :init==0 then goto1 end
+:b2+=:rp*(:r0+:r1+:r2+:r3+:r4+:r5+:r6+:r7+:r8)*2/100
+if :b2>:m then :b1+=:b2-:m :b2=:m end if :b1>:m then :b1=:m end goto2
+goto4

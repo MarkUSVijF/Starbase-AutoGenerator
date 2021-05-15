@@ -1,0 +1,34 @@
+include "generator_hardware"
+include "std/logic"
+
+// ##### settings #####
+define :Reactor = :ActiveReactor_0
+// we only need to check this reactor
+
+macro check(fuel_A, fuel_B) line
+    //if :SwapActiveReactors == 0 then if :Reactor%2==0 then :SwapActiveReactors=fuel_A==0 else :SwapActiveReactors=fuel_B==0 end end
+    //:SwapActiveReactors=logic_ternary(:SwapActiveReactors==0,logic_ternary(:Reactor%2==0,fuel_A,fuel_B),0)==0
+    :SwapActiveReactors=(fuel_B+(fuel_A-fuel_B)*(:Reactor%2==0))*(:SwapActiveReactors==0)==0
+end
+
+table>
+$ check(:ReactorFuel_00, :ReactorFuel_01); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_02, :ReactorFuel_03); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_04, :ReactorFuel_05); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_06, :ReactorFuel_07); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_08, :ReactorFuel_09); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_10, :ReactorFuel_11); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_12, :ReactorFuel_13); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_14, :ReactorFuel_15); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_16, :ReactorFuel_17); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_18, :ReactorFuel_19); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_20, :ReactorFuel_21); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_22, :ReactorFuel_23); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_24, :ReactorFuel_25); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_26, :ReactorFuel_27); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_28, :ReactorFuel_29); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_30, :ReactorFuel_31); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_32, :ReactorFuel_33); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_34, :ReactorFuel_35); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_36, :ReactorFuel_37); goto table+(:Reactor/2) $
+$ check(:ReactorFuel_38, :ReactorFuel_39); goto table+(:Reactor/2) $

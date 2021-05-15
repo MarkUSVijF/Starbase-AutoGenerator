@@ -1,0 +1,5 @@
+a++ if :init==0 then goto1 end :e=500
+a++ b=a+:m*100
+a++ if a<b then goto3 end if :b1+:b2<=0 then :e=0 goto5 end
+a++ if :e>:b1+:b2 then :e=0 :b1=0 :b2=0 goto5 end :e+=500 goto2
+a++ goto5
